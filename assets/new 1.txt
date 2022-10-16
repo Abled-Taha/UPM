@@ -1,0 +1,28 @@
+The Umdah Password Manager is one of the best and most modern password managers available on the market. It allows you to save all your passwords on a secure server which you own, and sync your passwords across all your devices. Umdah is a completely open-source, cross-platform, modern, multithreaded & free password manager that allows you to create, store, edit, remove and auto-fill your passwords. No need to open your web browser to access your passwords. You can access all your passwords in a quick, easy and secure manner. Umdah lets you create, remove and edit your passwords with a simple tap.
+
+Your passwords are stored remotely in a database which you own & run instead of the conventional way of using someone's provided Database. It uses a Salted-Hash technique to store the passwords in the database as well as storing it in cache of the device for offline access and uses a pepper in the hashing process so that it becomes hard for a brute force hacker to crack the passwords, so you can be rest assured that a hacker can't access your data.. Besides, it also has complete account-wise management of passwords. It also syncs to database(s) on demand or as given by the user.
+
+Some of it's Features Include:
+- A unique and in-depth internal algorithm
+- Add, Remove & Edit Passwords
+- Hashing, Salting & Peppering before Storing
+- Only You have your Details
+- Stores Passwords Not only in the Database but also Stores it in Cache of the Device
+- All the Passwords are Managed Account-wise
+- Cross-Platform (Android, Linux & Windows), Open-Source, Modern, Multi-Threaded & Free
+- Auto-Fill Passwords
+- Sync all the Passwords in all the Devices
+- Completely Customisable (Making it's Forks)
+
+
+
+late Future people;
+  Future getPeople() async {
+    var response = await Dio()
+        .get('https://contact-me-api-python.herokuapp.com/225338242/find');
+    await Future.delayed(Duration(seconds: 1));
+    return response.data;
+  }
+
+
+
