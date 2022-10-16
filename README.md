@@ -28,7 +28,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-There are many great Password Managers available out-there having more features than this application and I even recommend using those ones as your main Password Manager, however, I just started this project as a hobby and I am working on it so, if you want to try it, you are more than welcome to. This Project started as a "Random Password Generator" [here](https://github.com/Abled-Taha/Random-Password-Generator.GUI), It then evolved into a Password Manager but it still was made poorly & was not made for managing passwords but just for randomly generating new passwords. I then, started the next generation of this project, carefully choosing the features I want in it, what will be it's limitaions & carefully choosing the technologies it will use. It came to be known as [UPM](https://github.com/Abled-Taha/upm), The Ultimate Password Manager.
+There are many great Password Managers available out-there having more features than this application and I even recommend using those ones as your main Password Manager, however, I just started this project as a hobby and I am working on it so, if you want to try it, you are more than welcome to. This Project started as a "Random Password Generator" [here](https://github.com/Abled-Taha/Random-Password-Generator-GUI), It then evolved into a Password Manager but it still was made poorly & was not made for managing passwords but just for randomly generating new passwords. I then, started the next generation of this project, carefully choosing the features I want in it, what will be it's limitaions & carefully choosing the technologies it will use. It came to be known as [UPM](https://github.com/Abled-Taha/upm), The Ultimate Password Manager.
 
 ### Features
 * Managing Passwords in separate Accounts
@@ -50,12 +50,12 @@ There are many great Password Managers available out-there having more features 
 * [MongoDB](https://www.mongodb.com)
 
 ### Usage
-I am not responsible for any kind of use of this software, it was made for generally ethical use and anyone who uses this software for any malicious purpose is responsible for himself/herself
+I am not responsible for any kind of use of this software, it was made for generally ethical use and anyone who uses this software for any malicious purpose is responsible for himself/herself.
 
 ### Roadmap
-[] Add Realeases for Debian
+[ ] Add Realeases for Debian
 
-See the [open issues](#) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Abled-Taha/upm/issues) for a list of proposed features (and known issues).
 
 
 <!-- GETTING STARTED -->
