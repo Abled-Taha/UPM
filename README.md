@@ -5,7 +5,6 @@
 [![MIT License][license-shield]][license-url]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -24,89 +23,95 @@
     <a href="https://github.com/Abled-Taha/upm/issues/new">Request Feature</a>
   </p>
 </p>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#atp-built-with">Built With</a></li>
-        <li><a href="#atp-features">Features</a></li>
-        <li><a href="#atp-usage">Usage</a></li>
-        <li><a href="#atp-roadmap">Roadmap</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#gs-setting-up-server">Setting Up Server</a></li>
-          <ul>
-            <li><a href="#gssus-in-windows">In Windows</a></li>
-            <li><a href="#gssus-in-linux">In Linux</a></li>
-          </ul>
-        <li><a href="#gs-installation-of-client">Installation Of Client</a></li>
-          <ul>
-            <li><a href="gsioc-building">Building</a></li>
-              <ul>
-                <li><a href="#gsiocb-for-windows">For Windows</a></li>
-                <li><a href="#gsiocb-for-linux">For Linux</a></li>
-                <li><a href="#gsiocb-for-android">For Anrdroid</a></li>
-              </ul>
-            <li><a href="#gsioc-installing-pre-built-package">Installing Pre Built Package</a></li>
-              <ul>
-                <li><a href="#gsiocipbp-in-windows">In Windows</a></li>
-                <li><a href="#gsiocipbp-in-linux">In Linux</a></li>
-                <li><a href="#gsiocipbp-in-android">In Android</a></li>
-              </ul>
-          </ul>
-      </ul>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
 <br>
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+There are many great Password Managers available out-there having more features than this application and I even recommend using those ones as your main Password Manager, however, I just started this project as a hobby and I am working on it so, if you want to try it, you are more than welcome to. This Project started as a "Random Password Generator" [here](https://github.com/Abled-Taha/Random-Password-Generator.GUI), It then evolved into a Password Manager but it still was made poorly & was not made for managing passwords but just for randomly generating new passwords. I then, started the next generation of this project, carefully choosing the features I want in it, what will be it's limitaions & carefully choosing the technologies it will use. It came to be known as [UPM](https://github.com/Abled-Taha/upm), The Ultimate Password Manager.
 
-About The Project.
-
-### Features:
-* Features
-* Features
+### Features
+* Managing Passwords in separate Accounts
+* Password Generation
+* Encrypting Passwords before storing
+* One Master Password for each Account to protect all Passwords stored in that Account
+* No Data Collected
+* Free
+* Open-Source
+* Community Driven
+* No Second-Party Servers, only You run Your Server
+* Stores Passwords in cache, as well
+* Supporting Multiple Platforms (Windows, Linux, Android)
+* Customizable
 
 ### Built With
+* [Flutter](https://flutter.dev)
+* [Flask](https://flask.palletsprojects.com/en/2.2.x/)
+* [MongoDB](https://www.mongodb.com)
 
-* [Name Of Technology](#)
-* [Name Of Technology](#)
+### Usage
+I am not responsible for any kind of use of this software, it was made for generally ethical use and anyone who uses this software for any malicious purpose is responsible for himself/herself
+
+### Roadmap
+[] Add Realeases for Debian
+
+See the [open issues](#) for a list of proposed features (and known issues).
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
+This project is supported to Windows, Linux & Android however, for Windows & Android I do have official releases but as for Linux there are no releases, you have to install it from AUR, if you are on ARCH or build it for yourself. Moreover, The releases are only for the main branch of the project if you want to try another branch, you need to build it yourself.
 
-This project is supported to Windows and Linux, however, for Windows I do have official releases but as for Linux there are no releases, you have to build it yourself. Moreover, The releases are only for the main branch of the project if you want to try another branch, you need to build it yourself.
+### Setting Up Server
+#### Installing
+##### For Windows
 
+##### For Android
 
+##### For Linux
+###### For Debian
 
-<!-- USAGE EXAMPLES -->
-## Usage
+###### For Arch
 
-This product should only be used as an **exploration or educational** project and is not recommended to be used as a primary Password Manager as it lacks many essential features like, storing your password and user accounts in database, rather it stores all the data on your **local machine**.
+#### Building
+##### For Windows
 
-<!-- ROADMAP -->
-## Roadmap
+##### For Android
+###### In Windows
 
-See the [open issues](#) for a list of proposed features (and known issues).
+###### In Linux
+
+##### For Linux
+###### For Debian
+
+###### For Arch
+
+### Setting Up Client
+#### Installing
+##### For Windows
+
+##### For Android
+
+##### For Linux
+###### For Debian
+
+###### For Arch
+
+#### Building
+##### For Windows
+
+##### For Android
+###### In Windows
+
+###### In Linux
+
+##### For Linux
+###### For Debian
+
+###### For Arch
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
@@ -117,17 +122,13 @@ Contributions are what make the open source community such an amazing place to l
 
 <!-- LICENSE -->
 ## License
-
 Distributed under the MIT License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
 ## Contact
-
 Abled Taha - [@AbledTaha](https://twitter.com/@AbledTaha) - abledtaha@gmail.com
-
-Project Link: [Project](#)
+Project Link: [Project](https://github.com/Abled-Taha/upm)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
