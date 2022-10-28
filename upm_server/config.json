@@ -1,0 +1,29 @@
+{
+    "usernameDatabase":"upm",
+    "passwordDatabase":"upmuserpass",
+    "ipDatabase":"localhost",
+    "portDatabase":"27017",
+    "ipServer":"0.0.0.0",
+    "portServer":"5000",
+    "dbName":"upmdata",
+    "collectionUserName":"users",
+    "passwordMain":"1.complexPassword.1",
+    "passwordEncryptionKey":"1.complexPasswordEncryptionKey.1",
+    "numberOfSalts":5,
+    "salts":{
+        "0":"4p%B",
+        "1":"8j(t",
+        "2":"61p^",
+        "3":"5d0&",
+        "4":"0F!a"
+    },
+    "numberOfPeppers":5,
+    "peppers":{
+        "0":"4p%B",
+        "1":"8j(t",
+        "2":"61p^",
+        "3":"5d0&",
+        "4":"0F!a"
+    },
+    "debug":true
+}
