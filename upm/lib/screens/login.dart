@@ -1,9 +1,57 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:upm/file_manager.dart';
 import 'package:upm/screens/home.dart';
 import 'package:upm/screens/signup.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  late Map<String, dynamic> config;
+
+  final TextEditingController controllerEmail =
+      TextEditingController.fromValue(const TextEditingValue(text: ""));
+
+  final TextEditingController controllerPassword =
+      TextEditingController.fromValue(const TextEditingValue(text: ""));
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  Future<Map<String, dynamic>> getData() async {
+    config = await const FileStorage().readConfig();
+    return config;
+  }
+
+  showErrorDialog(BuildContext context, String title, String content) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text(title),
+        content: Text(
+          content,
+        ),
+      ),
+    );
+  }
+
+  Future login() async {
+    try {
+      return getData().then((value) async {
+        Dio dio = Dio();
+        Response response = await dio.get(
+            'http://${value["serverIP"]}:${value["port"]}/${value["passwordMain"]}/login/${controllerEmail.text}/${controllerPassword.text}');
+        return response;
+      });
+    } catch (e) {}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,34 +62,56 @@ class Login extends StatelessWidget {
       ),
       body: Container(
         padding:
-            const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 200),
+            const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 50),
         child: Center(
-          child: Column(
-            children: const [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Enter Email',
-                  border: OutlineInputBorder(),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                TextField(
+                  controller: controllerEmail,
+                  decoration: const InputDecoration(
+                    labelText: 'Enter Email',
+                    border: OutlineInputBorder(),
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Enter Password',
-                  border: OutlineInputBorder(),
+                const SizedBox(
+                  height: 15,
                 ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              ElevatedButton(
-                onPressed: null,
-                child: Text("Login"),
-              )
-            ],
+                TextField(
+                  controller: controllerPassword,
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    labelText: 'Enter Password',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    try {
+                      Response response = await login();
+                      if (response.data == "Done") {
+                        showErrorDialog(
+                            context, "Done", "You have been Logged In.");
+                      } else if (response.data == "credentials") {
+                        showErrorDialog(context, "Wrong Credentials",
+                            "The Credentials You Entered (Username/Password) are incorrect.");
+                      }
+                    } catch (e) {}
+                  },
+                  child: const Text("Login"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    controllerEmail.text = "test@gmail.com";
+                    controllerPassword.text = "test";
+                  },
+                  child: const Text("Test"),
+                )
+              ],
+            ),
           ),
         ),
       ),

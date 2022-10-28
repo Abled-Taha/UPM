@@ -17,6 +17,12 @@ class _SettingsState extends State<Settings> {
       const TextEditingValue(text: "initValue"));
   TextEditingController controllerPort = TextEditingController.fromValue(
       const TextEditingValue(text: "initValue"));
+  TextEditingController controllerPasswordMain =
+      TextEditingController.fromValue(
+          const TextEditingValue(text: "initValue"));
+  TextEditingController controllerPasswordEncryptionKey =
+      TextEditingController.fromValue(
+          const TextEditingValue(text: "initValue"));
 
   @override
   void initState() {
@@ -25,7 +31,9 @@ class _SettingsState extends State<Settings> {
     getData().then((value) {
       setState(() {
         controllerServerIP.text = value["serverIP"];
-        controllerPort.text = value["port"].toString();
+        controllerPort.text = value["port"];
+        controllerPasswordMain.text = value["passwordMain"];
+        controllerPasswordEncryptionKey.text = value["passwordEncryptionKey"];
       });
     });
   }
@@ -46,39 +54,65 @@ class _SettingsState extends State<Settings> {
         padding:
             const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 15),
         child: Center(
-          child: Column(
-            children: [
-              TextFormField(
-                controller: controllerServerIP,
-                decoration: const InputDecoration(
-                  labelText: 'Server IP',
-                  border: OutlineInputBorder(),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                TextFormField(
+                  controller: controllerServerIP,
+                  decoration: const InputDecoration(
+                    labelText: 'Server IP',
+                    border: OutlineInputBorder(),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              TextFormField(
-                controller: controllerPort,
-                decoration: const InputDecoration(
-                  labelText: 'Server Port',
-                  border: OutlineInputBorder(),
+                const SizedBox(
+                  height: 15,
                 ),
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              ElevatedButton(
-                onPressed: (() {
-                  config = {
-                    "serverIP": controllerServerIP.text,
-                    "port": controllerPort.text,
-                  };
-                  const FileStorage().writeConfig(config);
-                }),
-                child: const Text("Save"),
-              )
-            ],
+                TextFormField(
+                  controller: controllerPort,
+                  decoration: const InputDecoration(
+                    labelText: 'Server Port',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                TextFormField(
+                  controller: controllerPasswordMain,
+                  decoration: const InputDecoration(
+                    labelText: 'Main Password Of The Server (API Key)',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                TextFormField(
+                  controller: controllerPasswordEncryptionKey,
+                  decoration: const InputDecoration(
+                    labelText:
+                        'Password for Encrypting data for sending to Server',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                ElevatedButton(
+                  onPressed: (() {
+                    config = {
+                      "serverIP": controllerServerIP.text,
+                      "port": controllerPort.text,
+                      "passwordMain": controllerPasswordMain.text,
+                      "passwordEncryptionKey":
+                          controllerPasswordEncryptionKey.text,
+                    };
+                    const FileStorage().writeConfig(config);
+                  }),
+                  child: const Text("Save"),
+                )
+              ],
+            ),
           ),
         ),
       ),

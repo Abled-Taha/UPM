@@ -22,8 +22,10 @@ class FileStorage extends StatelessWidget {
     File file = await _localFileConfig;
     if (await file.exists() == false) {
       Map<String, dynamic> config = {
-        "serverIP": "0.0.0.0",
-        "port": 1234,
+        "serverIP": "localhost",
+        "port": "5000",
+        "passwordMain": "1.complexPassword.1",
+        "passwordEncryptionKey": "1.complexPasswordEncryptionKey.1"
       };
       await writeConfig(config);
     }
