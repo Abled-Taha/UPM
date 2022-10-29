@@ -60,7 +60,7 @@ See the [open issues](https://github.com/Abled-Taha/upm/issues) for a list of pr
 
 <!-- GETTING STARTED -->
 ## Getting Started
-This project is supported to Windows, Linux & Android however, for Windows & Android I do have official releases but as for Linux there are no releases, you have to install it from AUR, if you are on ARCH or build it for yourself. Moreover, The releases are only for the main branch of the project if you want to try another branch, you need to build it yourself.
+This project is supported to Windows, Linux & Android, & I have releases for all of them but if for any case you want to build it yourself, you can but the instructions of it are not updated as of now.
 
 ### Setting Up Server
 #### Requirements
@@ -82,7 +82,11 @@ This project is supported to Windows, Linux & Android however, for Windows & And
 14. All Done.
 ### Setting Up Client
 #### For Windows, Android & Linux (Debian / Arch)
-
+1. Download one of the [release](https://github.com/Abled-Taha/upm/releases) according to your system.
+* If on Anrdoid, install the APK file.
+* If on Linux, extract the zip file and put the directory where you want the program to be & it can run directly.
+* If on Windows, run the installer and install like any normal program.
+**For Windows And Linux the config file of the program will be stored in ```Documents```, atleast for now. If deleted you have to configure you client settings once again.**
 
 <!-- CONTRIBUTING -->
 ## Contributing

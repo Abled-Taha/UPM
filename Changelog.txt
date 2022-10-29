@@ -1,1 +1,2 @@
-1. Modified root .gitignore to ignore every file installer/UPM_*
+1. Added more information in README.md about linux releases.
+2. Added instructions in README.md to install client
