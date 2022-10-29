@@ -1,1 +1,1 @@
-1. Added UPM_Installer.exe to root .gitignore file
+1. Modified root .gitignore to ignore every file installer/UPM_*
