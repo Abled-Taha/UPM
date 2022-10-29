@@ -1,2 +1,1 @@
-1. Changed the App Icon for Windows App
-2. Created a backup file for default flutter app icon
+1. Added an app icon file in root assets directory
