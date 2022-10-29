@@ -1,3 +1,1 @@
-1. Updated the upm/adnroid/app/build.gradle to use jdk8
-2. Deleted assets/mongod.cfg
-3. Updated upm/pubspec.yaml to set versions for apk
+1. Removed the release folder from the root directory and made a new folder named installer
