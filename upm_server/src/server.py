@@ -1,3 +1,4 @@
+from distutils.log import debug
 import random
 from passlib.hash import sha512_crypt as sha512
 from flask import Flask
@@ -9,6 +10,7 @@ ipDatabase = Config.ipDatabase
 portDatabase = Config.portDatabase
 usernameDatabase = Config.usernameDatabase
 passwordDatabase = Config.passwordDatabase
+debugServer = Config.debug
 
 client = MongoClient(f"mongodb://{usernameDatabase}:{passwordDatabase}@{ipDatabase}")
 db = client[Config.dbName]
@@ -128,6 +130,14 @@ def login(key, email, password):
         return "Done"
     elif result == "credentials":
         return "credentials"
+
+@app.route('/<string:key>/getaccounts')
+def giveAccounts(key):
+    if validateKey(key):
+        if debugServer:
+            return str(getAccounts())
+        return "false"
+    return "key"
 
 if __name__ == "__main__":
     app.run()

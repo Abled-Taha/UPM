@@ -1,2 +1,1 @@
-1. Added a Changelog File which will bed updated with each commit to indicated the full list of things done in that commit.
-2. Fixed a critical bug in server where the "performRegChecks" function could only take 3 arguments but 4 were being given to it.
+1. Added a function in server to get all the user accounts stored in database, but can only be done if the debugging mode is TRUE in config.json
