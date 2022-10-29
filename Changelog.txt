@@ -1,1 +1,2 @@
-1. Removed the release folder from the root directory and made a new folder named installer
+1. Changed the App Icon for Windows App
+2. Created a backup file for default flutter app icon
