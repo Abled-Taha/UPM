@@ -63,57 +63,30 @@ See the [open issues](https://github.com/Abled-Taha/upm/issues) for a list of pr
 This project is supported to Windows, Linux & Android however, for Windows & Android I do have official releases but as for Linux there are no releases, you have to install it from AUR, if you are on ARCH or build it for yourself. Moreover, The releases are only for the main branch of the project if you want to try another branch, you need to build it yourself.
 
 ### Setting Up Server
-#### Installing
-##### For Windows
-
-##### For Android
-
-##### For Linux
-###### For Debian
-
-###### For Arch
-
-#### Building
-##### For Windows
-
-##### For Android
-###### In Windows
-
-###### In Linux
-
-##### For Linux
-###### For Debian
-
-###### For Arch
-
+#### Requirements
+* Python 3
+#### For Windows & Linux (Debian / Arch)
+1. Download & Install [MongoDB](https://www.mongodb.com/try/download/community).
+2. Download & Install [MongoShell](https://www.mongodb.com/try/download/shell).
+3. Download the latest Server zip from [Releases](https://github.com/Abled-Taha/upm/releases).
+4. Extract the zip, a folder named upm_server should be seen.
+5. Edit the ```dbPath``` & ```path``` variables in ```upm_server/assets/mongod.cfg``` to where you want to store the database and logs, respectively.
+6. Optionally, you can also change the ```port``` & ```bindIp``` variables but would have to change them in client and server config as well (Not Recommended).
+7. Start the database with this config file ```mongod -f upm_server/assets/mongod.cfg```.
+8. Run ```mongosh.exe``` located in ```MongoShell/bin```.
+9. Here, you might need to authenticate & log in with the ```root``` user.
+10. Create a database ```use upmdata```.
+11. Create a user ```db.createUser({user: "upm",pwd:passwordPrompt(),passwordroles:[{role:"readWrite",db:"upmdata"}]})```.
+12. Type Password for the user and hit Enter.
+13. Set the ```passwordDatabase``` variable in ```upm_server/config.json``` to the password you just have set.
+14. All Done.
 ### Setting Up Client
-#### Installing
-##### For Windows
+#### For Windows, Android & Linux (Debian / Arch)
 
-##### For Android
-
-##### For Linux
-###### For Debian
-
-###### For Arch
-
-#### Building
-##### For Windows
-
-##### For Android
-###### In Windows
-
-###### In Linux
-
-##### For Linux
-###### For Debian
-
-###### For Arch
 
 <!-- CONTRIBUTING -->
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
