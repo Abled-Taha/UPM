@@ -28,7 +28,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-There are many great Password Managers available out-there having more features than this application and I even recommend using those ones as your main Password Manager, however, I just started this project as a hobby and I am working on it so, if you want to try it, you are more than welcome to. This Project started as a "Random Password Generator" [here](https://github.com/Abled-Taha/Random-Password-Generator-GUI), It then evolved into a Password Manager but it still was made poorly & was not made for managing passwords but just for randomly generating new passwords. I then, started the next generation of this project, carefully choosing the features I want in it, what will be it's limitaions & carefully choosing the technologies it will use. It came to be known as [UPM](https://github.com/Abled-Taha/upm), The Ultimate Password Manager.
+There are many great Password Managers available out-there having more features than this application and I even recommend using those ones as your main Password Manager, however, I just started this project as a hobby and I am working on it so, if you want to try it, you are more than welcome to. This Project started as a [**Random Password Generator**](https://github.com/Abled-Taha/Random-Password-Generator-GUI), It then evolved into a Password Manager but it still was made poorly & was not made for managing passwords but just for randomly generating new passwords. I then, started the next generation of this project, carefully choosing the features I want in it, what will be it's limitaions & carefully choosing the technologies it will use. It came to be known as [UPM](https://github.com/Abled-Taha/upm), The Ultimate Password Manager.
 
 ### Features
 * Managing Passwords in separate Accounts
@@ -69,7 +69,7 @@ This project is supported to Windows, Linux & Android however, for Windows & And
 1. Download & Install [MongoDB](https://www.mongodb.com/try/download/community).
 2. Download & Install [MongoShell](https://www.mongodb.com/try/download/shell).
 3. Download the latest Server zip from [Releases](https://github.com/Abled-Taha/upm/releases).
-4. Extract the zip, a folder named upm_server should be seen.
+4. Extract the zip, a folder named ```upm_server``` should be seen.
 5. Edit the ```dbPath``` & ```path``` variables in ```upm_server/assets/mongod.cfg``` to where you want to store the database and logs, respectively.
 6. Optionally, you can also change the ```port``` & ```bindIp``` variables but would have to change them in client and server config as well (Not Recommended).
 7. Start the database with this config file ```mongod -f upm_server/assets/mongod.cfg```.
