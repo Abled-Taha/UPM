@@ -1,3 +1,3 @@
-1. Added a .gitignore file in the root directory
-2. Added a release folder for use in development which will not be committed
-3. Added release folder in .gitignore file of root
+1. Updated the upm/adnroid/app/build.gradle to use jdk8
+2. Deleted assets/mongod.cfg
+3. Updated upm/pubspec.yaml to set versions for apk
