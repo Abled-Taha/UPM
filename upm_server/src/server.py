@@ -91,7 +91,7 @@ def getAccounts():
 
 @app.route('/<string:key>/reg/<string:email>/<string:password>/<string:username>')
 def reg(key, email, password, username):
-    result = performRegChecks(key, email, password, username)
+    result = performRegChecks(key, email, username)
     if result == True:
         # passwordEncryptionKey = Config.passwordEncryptionKey
         # password = base64.b64decode(password).decode('utf-8')
