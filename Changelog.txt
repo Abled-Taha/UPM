@@ -1,1 +1,1 @@
-1. Added an app icon file in root assets directory
+1. Changed the root .gitignore file to ignore just the upm_server.zip file
