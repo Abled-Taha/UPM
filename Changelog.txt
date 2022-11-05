@@ -1,4 +1,2 @@
-1. Added warning for internet connection in login screen.
-2. Added warning for internet connection in signup screen.
-3. Added floating button on main screen.
-4. Successfully logging-in now takes you directly to the vault screen.
+1. Changed the roadmap "Add Debian Release" to "Add Linux Release" & marked it as done.
+2. Added 3 more roadmap todo(s).

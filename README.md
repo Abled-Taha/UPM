@@ -53,7 +53,10 @@ There are many great Password Managers available out-there having more features 
 I am not responsible for any kind of use of this software, it was made for generally ethical use and anyone who uses this software for any malicious purpose is responsible for himself/herself.
 
 ### Roadmap
-[ ] Add Realeases for Debian
+[X] Add Releases for Linux.
+[] Add Main Functionality of Storing Password.
+[] Add Password Generation Functionality.
+[] Add Encryption while Trasfering Data over Internet.
 
 See the [open issues](https://github.com/Abled-Taha/upm/issues) for a list of proposed features (and known issues).
 
