@@ -13,8 +13,20 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text(name),
       ),
-      body: Center(
-        child: Container(),
+      body: Container(
+        padding:
+            const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 15),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [],
+            ),
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {},
       ),
       drawer: Drawer(
         child: ListView(

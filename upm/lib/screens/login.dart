@@ -50,7 +50,10 @@ class _LoginState extends State<Login> {
             'http://${value["serverIP"]}:${value["port"]}/${value["passwordMain"]}/login/${controllerEmail.text}/${controllerPassword.text}');
         return response;
       });
-    } catch (e) {}
+    } catch (e) {
+      showErrorDialog(context, "Connection Error",
+          "Please Check Your Internet Connection & Try Again Later");
+    }
   }
 
   @override
@@ -95,11 +98,18 @@ class _LoginState extends State<Login> {
                       if (response.data == "Done") {
                         showErrorDialog(
                             context, "Done", "You have been Logged In.");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Home()),
+                        );
                       } else if (response.data == "credentials") {
                         showErrorDialog(context, "Wrong Credentials",
                             "The Credentials You Entered (Username/Password) are incorrect.");
                       }
-                    } catch (e) {}
+                    } catch (e) {
+                      showErrorDialog(context, "Connection Error",
+                          "Please Check Your Internet Connection & Try Again Later");
+                    }
                   },
                   child: const Text("Login"),
                 ),

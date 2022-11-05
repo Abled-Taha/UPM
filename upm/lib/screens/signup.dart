@@ -56,7 +56,10 @@ class _SignupState extends State<Signup> {
             'http://${value["serverIP"]}:${value["port"]}/${value["passwordMain"]}/reg/${controllerEmail.text}/${controllerPassword.text}/${controllerUsername.text}');
         return response;
       });
-    } catch (e) {}
+    } catch (e) {
+      showErrorDialog(context, "Connection Error",
+          "Please Check Your Internet Connection & Try Again Later");
+    }
   }
 
   @override
